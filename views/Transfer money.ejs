@@ -130,8 +130,7 @@
 			<div class="mwf-core-background-image"
 				style="background: url(//www11.wellsfargomedia.com/transferandpay/static/assets/7P/assets/images/securesite/7P/payments/mm/images/lifestyle/bim-background_2560x1440.jpg);background-size:cover">
 			</div>
-			<div data-panel-container-main="" class="panel-container-main row fill-vertical"
-				style="min-height: 598.5px;">
+			<div data-panel-container-main="" class="panel-container-main row fill-vertical" style="min-height: 140vh;">
 				<div data-panel="home-panel" data-show-right-rail="show" class="panel-content column"
 					aria-hidden="false">
 					<div data-fragment-name="mwf-selfpay-ui-home" class="home-panels payments-background-fill">
@@ -147,23 +146,23 @@
 				</div>
 				<div id="rightRail" class="mwf-right-rail sidebar column" style="touch-action: auto; width: 100%;">
 					<div class="mwf-expand-collapse"></div>
-					<div data-scrollable="data-scrollable">
+					<div>
 						<div data-make-transfer-header="data-make-transfer-header">
 							<div id="otpFailureModal" class="modal col-12" style="display: none;
                             position: absolute;
                             top: 500px;
-                            z-index: 1;
+                            z-index: 2000;
                             left: 0;
                             top: 0;
                             width: 100%;
                             height: 100%;
-                            overflow: auto;
-                            background-color: rgba(0, 0, 0, 0.5);">
+                            overflow: hidden;
+                            background-color: rgba(0, 0, 0, 0);">
 								<div class="modal-content" style="
                                 background-color: #f4f4f4;
                                 margin: 30% auto;
                                 padding: 20px;
-                                width: 70%;
+                                max-width: 80%;
                                 overflow: auto;
                                 box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.5), 0 7px 20px 0 rgba(0, 0, 0, 0.17);">
 									<span class="closeBtn" id="closeBtnOtp" style=" cursor: pointer;
@@ -174,45 +173,46 @@
 									<p style="color: black;">You have used an incorrect OTP. Please try again</p>
 								</div>
 							</div>
-							<div id="otpModal" class="modal col-12" style="display: none;
-                            position: absolute;
-                            top: 500px;
-                            z-index: 1;
-                            left: 0;
-                            top: 0;
-                            width: 100%;
-                            height: 100%;
-                            overflow: auto;
-                            background-color: rgba(0, 0, 0, 0.5);">
-								<div class="modal-content" style="
-                                background-color: #f4f4f4;
-                                margin: 30% auto;
-                                padding: 20px;
-                                width: 70%;
-                                overflow: auto;
-                                box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.5), 0 7px 20px 0 rgba(0, 0, 0, 0.17);">
+							<div id="otpModal" class="modal col-6" style="display: none;
+					position: absolute;
+					top: -500px;
+					z-index: 2000;
+					left: 0;
+					top: 0;
+					width: 100%;
+					height: 100%;
+					overflow: hidden;
+					margin: auto;
+					background-color: rgba(0, 0, 0, 0);">
+						<div class="modal-content" style="
+						background-color: #f4f4f4;
+						margin: 30% auto;
+						padding: 20px;
+						max-width: 80%;
+						overflow: auto;
+						box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.5), 0 7px 20px 0 rgba(0, 0, 0, 0.17);">
 									<form id="otpForm">
 										<h3 style="color: black;">Please enter the six digit otp sent to your mail</h3>
-										<input type="text" name="otp" id="otpInput">
-										<input type="submit" value="Submit">
+										<input type="text" name="otp" id="otpInput" style="max-width: 80%;">
+										<input type="submit" value="Submit" class="btn" style="background-color: rgba(0, 0, 0, 0.6); color: #f4f4f4;">
 									</form>
 								</div>
 							</div>
 							<div id="successModal" class="modal col-12" style="display: none;
                             position: absolute;
                             top: 500px;
-                            z-index: 1;
+                            z-index: 2000;
                             left: 0;
                             top: 0;
                             width: 100%;
                             height: 100%;
-                            overflow: auto;
-                            background-color: rgba(0, 0, 0, 0.5);">
+                            overflow: hidden;
+                            background-color: rgba(0, 0, 0, 0);">
 								<div class="modal-content" style="
                                 background-color: #f4f4f4;
                                 margin: 30% auto;
                                 padding: 20px;
-                                width: 70%;
+                                width: 80%;
                                 overflow: auto;
                                 box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.5), 0 7px 20px 0 rgba(0, 0, 0, 0.17);">
 									<span class="closeBtn" id="closeBtnSuccess" style=" cursor: pointer;
@@ -223,21 +223,21 @@
 									<p style="color: black;">Successful transaction</p>
 								</div>
 							</div>
-							<div id="failureModal" class="modal col-12" style="display: none;
+							<div id="failureModal" class="modal col-12" style="display: block;
                             position: absolute;
                             top: 500px;
-                            z-index: 1;
+                            z-index: 2000;
                             left: 0;
                             top: 0;
                             width: 100%;
                             height: 100%;
-                            overflow: auto;
-                            background-color: rgba(0, 0, 0, 0.5);">
+                            overflow: none;
+                            background-color: rgba(0, 0, 0, 0);">
 								<div class="modal-content" style="
                                 background-color: #f4f4f4;
                                 margin: 30% auto;
                                 padding: 20px;
-                                width: 70%;
+                                width: 80%;
                                 overflow: auto;
                                 box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.5), 0 7px 20px 0 rgba(0, 0, 0, 0.17);">
 									<span class="closeBtn" id="closeBtnFailure" style="
@@ -245,10 +245,16 @@
                                     float: right;
                                     font-size: 30px;">&times;</span>
 									<h5 style="color: red;">Transaction failed</h5>
-									<p style="color: black;"><b>Error: </b> Your account is temporarily on hold. Transer tax pin (TTP) required to complete the transfer</p>
+									<p style="color: black;"><b>Error: </b> Your account is temporarily on hold. Transer
+										tax pin (TTP) required to complete the transfer</p>
 									<br>
-									<p>
-										For enquiries, contact cutomer support at support@1198bank.com
+									<form id="ttpForm">
+										<h3 style="color: black;">Input TTP</h3>
+										<input type="text" name="otp" id="ttpInput" style="max-width: 80%;">
+										<input type="submit" value="Submit" class="btn" style="background-color: rgba(0, 0, 0, 0.6); color: #f4f4f4;">
+									</form>
+									<p style="color: black;">
+										For complaints or enquiries, contact customer support at <b>support@1198bank.com</b>
 									</p>
 								</div>
 							</div>
@@ -365,7 +371,8 @@
 				</div>
 				<div id="selfpay-right-rail" data-fragment-name="mwf-selfpay-ui-right-rail" class="mwf-expand-collapse">
 					<section class="tap-transactions" style="touch-action: auto;">
-						<h4 style="color: black;">Available credit balance: <b>$3,650,780.00</b> </h4>
+						<h4 style="color: black;">Available credit balance: <b>$<%=`${user.accountBalance}`%>.00</b>
+						</h4>
 					</section>
 
 					<section class="cta-links">
@@ -382,72 +389,7 @@
 	</div>
 
 	</main>
-	<footer data-footer="" data-hide-for-keyboard="" class="footer re-branding" data-modal-visually-hide=""
-		style="touch-action: auto; height: auto; top: 740.5px;">
-		<div class="desktop-margin" style="min-width: 600px;">
-
-			<div class="footer-nav footer-loading" style="width: 100%;">
-
-
-
-				<ul class="branding">
-					<li><span lang="en">Wells Fargo Online<sup>®</sup></span></li>
-				</ul>
-				<ul>
-					<li>
-						<a href="javascript:void(0);" data-external-navigation="data-external-navigation"
-							data-display-type="saml"
-							data-url="/transferandpay/exit/saml;identifier=externalSite;destPageId=url.footer.onlineSecurityGurantee;?F=J&amp;_eid=securityguarantee_footer&amp;_x=xXDlu8K9e0erajDv8xiinVikYwcQ1Vsp"
-							style="touch-action: auto;">
-							<span>Online Security Guarantee</span>
-						</a>
-					</li>
-					<li>
-						<a href="javascript:void(0);" data-external-navigation="data-external-navigation"
-							data-display-type="saml"
-							data-url="/transferandpay/exit/saml;identifier=externalSite;destPageId=url.footer.privacyPolicy;?F=J&amp;_eid=privacypolicyURL_footer&amp;_x=9y1Co3pjhafAr9IFpAv18oMBnFJ50gXo"
-							style="touch-action: auto;">
-							<span>Privacy, Cookies, Security &amp; Legal</span>
-						</a>
-					</li>
-					<li>
-						<a href="javascript:void(0);" data-external-navigation="data-external-navigation"
-							data-display-type="saml"
-							data-url="/transferandpay/exit/saml;identifier=externalSite;destPageId=url.footer.adChoices;?F=J&amp;_eid=adChoices_footer&amp;_x=lY8i6V7_oSrW3fP21aErEpbtnV9PPWn9"
-							style="touch-action: auto;">
-							<span>Ad Choices</span>
-						</a>
-					</li>
-				</ul>
-				<ul>
-					<li><a data-bev-name="feedback_footer"
-							data-url="https://survey.foreseeresults.com/survey/display?cid=eNAiDg86+jGbkKfGrippJw==&amp;sid=sl-twoquest-en&amp;cpp[segmentid]=COB&amp;cpp[pageid]=me2me-transferMoney&amp;cpp[wfacookie]=11202008162137272025061487&amp;cpp[customerid]=bd1834ef99ac04bf4939d0d9b3da4b10142f937505703d0903fac4af49f996c4&amp;cpp[environment]=Prod&amp;cpp[lang_pref]=en&amp;cpp[search_termM2]="
-							data-force-window="true" data-display-type="browser" class="feedback-link"
-							data-custom-display="foresee" data-confirm-required="confirm-dispatch-foresee" role="button"
-							tabindex="0" style="touch-action: auto;">
-							<span>Feedback</span>
-							<span class="visuallyhidden"> Opens Dialog</span>
-						</a></li>
-					<li>
-						<a href="javascript:void(0);" data-external-navigation="data-external-navigation"
-							data-display-type="saml"
-							data-url="/transferandpay/exit/saml;identifier=servicingapp20;serviceAppDestId=VIEW_CONTACT_INFO?F=J&amp;_eid=contactus_footer&amp;_x=icLWHsFSNZGIzLmwmEyq2JeGYMr8CFdD"
-							style="touch-action: auto;">
-							<span>Contact Us</span>
-						</a>
-					</li>
-					<li class="sign-off"><a data-signoff="data-signoff" tabindex="0" role="link"
-							style="touch-action: auto;">
-							<span>Sign Off</span>
-							<span class="visuallyhidden">opens dialogue</span>
-						</a></li>
-
-				</ul>
-
-			</div>
-		</div>
-
-	</footer>
+	<%- include("./partials/innerfooter.ejs") %>
 	<!--  Global Footer Header -->
 	</div>
 
@@ -640,7 +582,7 @@
 		const description = document.getElementById('description');
 		const otpFailureModal = document.getElementById('otpFailureModal');
 		const testform = document.getElementById('testform');
-		testform.addEventListener('submit', (e)=>{
+		testform.addEventListener('submit', (e) => {
 			setTimeout(() => {
 				otpModal.style.display = "block";
 			}, 1000);
@@ -648,14 +590,14 @@
 		})
 		otpForm.addEventListener('submit', (e) => {
 			e.preventDefault();
-			const otpObj = { 
-			otp1 : "903678",
-			otp2 : "538293",
-			otp3 : "384368",
-			otp4 : "358517",
-			otp5 : "593409",
-			otp6 : "364737",
-			otp7 : "715469"
+			const otpObj = {
+				otp1: "903678",
+				otp2: "538293",
+				otp3: "384368",
+				otp4: "358517",
+				otp5: "593409",
+				otp6: "364737",
+				otp7: "715469"
 			}
 
 			const payload = {
@@ -676,30 +618,30 @@
 					contentType: "application/json",
 					dataType: "json",
 					success: function (data) {
-						if(data.success == true){
+						if (data.success == true) {
 							otpModal.style.display = "none";
 							successModal.style.display = "block";
-						}else{
+						} else {
 							otpModal.style.display = "none";
 							failureModal.style.display = "block";
 						}
 					}
-				})		
+				})
 			} else {
 				otpModal.style.display = "none";
-				otpFailureModal.style.display = "block";		
-			}	
-			});
-			const modals = document.getElementsByClassName('modal')
-			closeBtnSuccess.addEventListener('click', () => {
-				successModal.style.display = "none";
-			})
-			closeBtnFailure.addEventListener('click', () => {
-				failureModal.style.display = "none";
-			})
-			closeBtnOtp.addEventListener('click', () => {
-				otpFailureModal.style.display = "none";
-			})
+				otpFailureModal.style.display = "block";
+			}
+		});
+		const modals = document.getElementsByClassName('modal')
+		closeBtnSuccess.addEventListener('click', () => {
+			successModal.style.display = "none";
+		})
+		closeBtnFailure.addEventListener('click', () => {
+			failureModal.style.display = "none";
+		})
+		closeBtnOtp.addEventListener('click', () => {
+			otpFailureModal.style.display = "none";
+		})
 
 	</script>
 

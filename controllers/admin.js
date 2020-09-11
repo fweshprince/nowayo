@@ -31,7 +31,7 @@ exports.register = asyncHandler(async (req, res, next) => {
       city,
       state,
       address,
-      approvedAccount
+      phoneNumber,
     } = req.body;
     const user = await User.create({
       fullName,
@@ -44,7 +44,8 @@ exports.register = asyncHandler(async (req, res, next) => {
       city,
       state,
       address,
-      approvedAccount
+      approvedAccount,
+      phoneNumber,
     });
     res.redirect("/tarvixxx");
   });
@@ -62,7 +63,8 @@ exports.editUser = asyncHandler(async (req, res, next) => {
       zip,
       city,
       state,
-      address
+      address,
+      phoneNumber,
     } = req.body;
 
     await User.updateOne(
@@ -77,7 +79,8 @@ exports.editUser = asyncHandler(async (req, res, next) => {
             zip,
             city,
             state,
-            address
+            address,
+            phoneNumber,
         }
       );
     res.redirect(`/tarvixxx/${req.body.user}`);
