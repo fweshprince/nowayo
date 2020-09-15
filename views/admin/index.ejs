@@ -607,7 +607,7 @@
                                     <div class="form-row">
                                         <div class="col-md-4 mb-3">
                                             <label for="validationCustom03">Account number</label>
-                                            <input type="text" class="form-control" id="validationCustom03"
+                                            <input type="number" class="form-control" id="validationCustom03"
                                                 placeholder="Account number" name="accountNumber">
                                         </div>
                                         <div class="col-md-4 mb-3">
@@ -645,6 +645,11 @@
                                             <input type="text" class="form-control" id="validationCustom03"
                                                 placeholder="Phone number" name="phoneNumber">
                                         </div>
+                                        <div class="col-md-4 mb-3">
+                                            <label for="validationCustom03">Approved Account</label>
+                                            <input type="text" class="form-control" id="validationCustom03"
+                                                placeholder="Approved account" name="approvedAccount">
+                                        </div>
                                     </div>
                                     <div><input type="submit" value="Post" class="normalBtn"></div>
                                 </form>
@@ -655,10 +660,10 @@
                                 <div class="widget-content-outer">
                                     <div class="widget-content-wrapper">
                                         <div class="widget-content-left">
-                                            <div class="widget-subheading">Number of users</div>
+                                            <div class="widget-subheading">Number of users created</div>
                                         </div>
                                         <div class="widget-content-right">
-                                            <div class="widget-numbers text-danger"><%=`${user.length}`%></div>
+                                            <div class="widget-numbers text-danger"><%=`${users.length}`%></div>
                                         </div>
                                     </div>
                                 </div>

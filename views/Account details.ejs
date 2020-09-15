@@ -162,6 +162,167 @@
 						</div>
 					</div>
 				</div>
+				<div class="accounts column" style="touch-action: auto;">
+					<h1 class="visuallyhidden" tabindex="-1">Account Summary</h1>
+					<!-- Customer messages  -->
+					<div data-message-container="page" role="alert">
+						<ul class="message-list">
+							<li class="messaging message alert customer-level" data-emergency-msg="emergencyAlertMsg">
+								<div class="message-icon"> <i class="icon message-alert"></i><span
+										class="visuallyhidden">Alert</span></div>
+								<div class="cms-message-content">
+	
+									<p>Our phone and branch wait times may be longer than usual, but we're still here to
+										help you. Get updates on <a class="samloutbound"
+											data-url="/accounts/ia/processofferdestination;identifier=externalSite;?F=J&amp;destinationURL=https%3A%2F%2Fwww.wellsfargo.com%2Fjump%2Fenterprise%2Fcoronavirus-response%2F&amp;_x=sBEvUa0DLn5TlWHGsiMh0jSd0qsxOHKK"
+											tabindex="0" role="link"><span>COVID-19 support</span></a>.</p>
+	
+	
+	
+	
+								</div>
+							</li>
+	
+						</ul>
+					</div><!--  Summary Title and Accounts Tiles -->
+					<!--  CLL alignment code fix -->
+					
+					<!-- Account Tiles -->
+					<!-- Depending on the Summary Display Mode, Include the different fragments -->
+					<!-- Iterate Account Categories -->
+					<div class="summary-tile-view">
+						<!-- Iterate Views -->
+						<!-- Set Variables  To be used on Template -->
+						<div class="account-summary-tile row">
+							<div class="sub-component-group">
+								<div class="account-tile-header">
+									<a data-url="/accounts/inquiry/accountdetails/c70e922f-222f-42d9-8fb9-379401f521c3?F=M&amp;_eid=account_detail&amp;_aid=c70e922f-222f-42d9-8fb9-379401f521c3&amp;_x=6U-fP_5C0tjFXVd5pIEb5hU8b9sXOdzZ"
+										class="account-title-group column " tabindex="0" role="link">
+										<i class="icon acct-tile  checking"></i>
+										<span class="account-name OneLinkNoTx" lang="en">
+											EVERYDAY CHECKING</span>
+										<span class="masked-account-number has-wells-advisor">
+											<span class="OneLinkNoTx">...<%=`${user.accountNumber.toString().slice(-4) }`%></span>
+										</span>
+									</a>
+									<div class="balance-group-holder column">
+										<div class="account-balance-group">
+											<div class="account-balance  OneLinkNoTx">
+												<a tabindex="0"
+													data-url="/accounts/inquiry/accountdetails/c70e922f-222f-42d9-8fb9-379401f521c3?F=M&amp;_eid=account_detail&amp;_aid=c70e922f-222f-42d9-8fb9-379401f521c3&amp;_x=6U-fP_5C0tjFXVd5pIEb5hU8b9sXOdzZ"
+													class="" role="link">
+													<sup>$</sup><%=`${user.accountBalance}`%>.00</a>
+											</div>
+											<span class="balance-descriptor">
+												Available balance</span>
+										</div>
+									</div>
+	
+									<a data-content-id="hot-task-c70e922f-222f-42d9-8fb9-379401f521c3" role="button"
+										class="hot-task-menu account-info-hot-task hot-task-menu-init active-hot-task"
+										id="5J2IQUBI" style="touch-action: auto;" tabindex="0"
+										aria-label="Hot task menu - Opens dialog"></a>
+								</div>
+	
+								<!-- SubAccounts Link -->
+								<!-- Account Messages -->
+								<!-- Hot Tasks bar -->
+								<div data-content-id="hot-task-c70e922f-222f-42d9-8fb9-379401f521c3"
+									class="popover-content hot-task-content hot-task-menu hot-task-menu-init" id="Y1XNLZY8"
+									style="touch-action: auto;" tabindex="0" aria-label="Hot task menu - Opens dialog">
+									<ul class="task-list">
+										<li>
+											<a role="link"
+												data-url="/accounts/inquiry/accountdetails/c70e922f-222f-42d9-8fb9-379401f521c3?F=M&amp;accountId=c70e922f-222f-42d9-8fb9-379401f521c3&amp;_eid=viewactivity_hotlinks&amp;_x=Sc40yyuWjBSv4Kpj83oWXfAc4TbwCLXY"
+												tabindex="0" class="view-activity">
+												<span>View Activity</span>
+											</a>
+										</li>
+										<li>
+											<a role="link"
+												data-url="/accounts/exit/saml;identifier=transferMoney;destPageId=;_aid=c70e922f-222f-42d9-8fb9-379401f521c3;?F=J&amp;_eid=transfermoney_hotlinks&amp;_x=G7e7_gUSImc6c3RDg79daHibKGtIttWc"
+												tabindex="0" class="samloutbound transfer-money">
+												<span>Transfer Money</span>
+											</a>
+										</li>
+										<li>
+											<a role="link"
+												data-url="/accounts/exit/saml;identifier=sendMoney;destPageId=;accountId=c70e922f-222f-42d9-8fb9-379401f521c3;?F=J&amp;_eid=sendmoney_hotlinks&amp;_x=SlQV8wc9JH2Bsochn2l-DXySTedMpDU4"
+												tabindex="0" class="samloutbound send-money">
+												<span>Send Money</span>
+											</a>
+										</li>
+										<li>
+											<a role="link"
+												data-url="/accounts/exit/saml;identifier=edocsapp;edocsAppDestId=EDOCS_HUB_VIEW_STMT;accountId=c70e922f-222f-42d9-8fb9-379401f521c3?F=J&amp;_eid=viewstmtsonline_hotlinks&amp;_x=umC3r4pxbw1Age9R9II-il04lb3xucAS"
+												tabindex="0" class="samloutbound view-statements">
+												<span>View Statements</span>
+											</a>
+										</li>
+										<li>
+											<a role="link"
+												data-url="/accounts/exit/saml;identifier=messagecenter;accountId=c70e922f-222f-42d9-8fb9-379401f521c3?F=J&amp;_eid=alertCenter_hotlinks&amp;_x=zPJ8MM2lPOYq3Jq_ibi3JXibm5Pau8bM"
+												tabindex="0" class="samloutbound manage-alerts">
+												<span>Manage Alerts</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="dialog-content hidden">
+	
+								</div>
+								<!-- Feature Promotions bar -->
+								<div class="feature-promotions open">
+									<ul class="row OneLinkNoTx">
+										<li class="column" data-offer-disposition-id="f5bd6570-dcf9-4faf-8bc3-898ee4dce793"
+											style="touch-action: auto;">
+											<div class="iaRendered" data-slot-id="AS_PROMO"
+												data-offer-id="C_sav_way2save_promo" lang="en"><a class="samloutbound"
+													data-url="/accounts/exit/saml;identifier=WWWOffers;?F=J&amp;destinationURL=%2Fsavings-cds%2Fway2save%2F&amp;trackingId=slot-id%3DAS_PROMO%2Coffer-id%3DC_sav_way2save_promo&amp;_x=sNi0tI8xVSW_PtIW0HXRtpbDE6dzmeWk"
+													style="touch-action: auto;" tabindex="0" role="link">
+	
+	
+													<span class="icon feature-promo">
+														<img alt=""
+															src="wfi000_ic_b-piggy-bank-fill.svg">
+													</span>
+	
+													<span>Open a Way2Save savings today</span>
+	
+												</a></div>
+										</li>
+										<li class="column" data-offer-disposition-id="63cdb5bb-21ca-470a-8163-a4e5e2f4d0d8"
+											style="touch-action: auto;">
+											<div class="iaRendered" data-slot-id="AS_PROMO"
+												data-offer-id="C_ccd_berry_promo" lang="en"><a
+													data-tracking-id="28579-210515-3408-88" data-url.type="SAML_ONLY"
+													class="samloutbound"
+													data-url="/accounts/exit/saml;identifier=OSMPOffers;?F=J&amp;destinationURL=%2Folb-wib-OspOffer&amp;trackingId=slot-id%3DAS_PROMO%2Coffer-id%3DC_ccd_berry_promo&amp;_x=yqeFzExl9KXBpGJGC5aDW0F3sCVi0rqV"
+													style="touch-action: auto;" tabindex="0" role="link">
+	
+	
+													<span class="icon feature-promo">
+														<img alt=""
+															src="wfi000_ic_d-creditcardemv-propel-fill_src.svg">
+													</span>
+	
+													<span>Earn 20,000 bonus points</span>
+	
+												</a></div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+	
+						<!-- Remove Variables set previously to avoid the conflicts at other places on page. -->
+						<div id="Cash-account-group" class="category-group open">
+						</div>
+					</div>
+					<!-- End Expand Collapse for Commercial Lines And Loans -->
+					<!-- View list popover  for Views-->
+
+				</div>
 				<div id="rightRail" class="mwf-right-rail sidebar column" style="touch-action: auto; width: 100%;">
 					<div class="mwf-expand-collapse"></div>
 					<div data-scrollable="data-scrollable">
@@ -268,7 +429,7 @@
 					<div id="selfpay-right-rail" data-fragment-name="mwf-selfpay-ui-right-rail"
 						class="mwf-expand-collapse">
 						<section class="tap-transactions" style="touch-action: auto;">
-								<h4 style="color: black;">Available credit balance: <b>$<%=`${user.accountBalance}`%>.00</b> </h4>
+								
 						</section>
 
 						<section class="cta-links">
@@ -278,9 +439,23 @@
 						</section>
 					</div>
 				</div>
-				<h4 style="color: black;">Available credit balance: <b>$3,650,780.00</b> </h4>
+				
 			</div>
-
+			<div class="accounts column" style="touch-action: auto;">
+				<!-- Start Disclosures -->
+				<div class="disclosures-container">
+					<h3><i class="icon disclosure"></i><span class="visuallyhidden">*</span>Account Disclosures</h3>
+					<div class="disclosures">
+						<p></p>
+						<p>Deposit products offered by Independent Bank, N.A. Member FDIC.</p>
+						<p></p>
+						<p><i class="icon ehl-logo"></i>Equal Housing Lender</p>
+						<p>FICO is a registered trademark of Fair Isaac Corporation in the United States and other
+							countries.</p>
+					</div>
+				</div>
+				<!-- End Disclosures -->
+			</div>
 		</main>
 		<%- include("./partials/innerfooter.ejs") %>
 		<!--  Global Footer Header -->

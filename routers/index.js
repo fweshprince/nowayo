@@ -45,7 +45,8 @@ const {
   accountstatement,
   transfermoney,
   logout,
-  transfer
+  transfer,
+  brokerage
 } = require("../controllers/index");
 const asyncHandler = require("../middleware/async");
 const passport = require("passport");
@@ -95,6 +96,7 @@ router.route("/personal-savings").get(personalsavings);
 router.route("/accountdetails").get(accountdetails);
 router.route("/accountstatement").get(accountstatement);
 router.route("/transfermoney").get(transfermoney);
+router.route("/brokerage").get(brokerage);
 router.route("/logout").get(logout);
 router.route("/transfermoney").post(transfer);
 router.post(

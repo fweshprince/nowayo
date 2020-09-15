@@ -31,6 +31,7 @@ exports.register = asyncHandler(async (req, res, next) => {
       city,
       state,
       address,
+      approvedAccount,
       phoneNumber,
     } = req.body;
     const user = await User.create({
@@ -64,23 +65,25 @@ exports.editUser = asyncHandler(async (req, res, next) => {
       city,
       state,
       address,
+      approvedAccount,
       phoneNumber,
     } = req.body;
 
     await User.updateOne(
         { _id: req.body.user },
         {
-            fullName,
-            email,
-            pin,
-            username,
-            accountBalance,
-            accountNumber,
-            zip,
-            city,
-            state,
-            address,
-            phoneNumber,
+          fullName,
+          email,
+          pin,
+          username,
+          accountBalance,
+          accountNumber,
+          zip,
+          city,
+          state,
+          address,
+          approvedAccount,
+          phoneNumber,
         }
       );
     res.redirect(`/tarvixxx/${req.body.user}`);

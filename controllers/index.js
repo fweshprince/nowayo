@@ -217,7 +217,7 @@ exports.retirementplanning = asyncHandler(async (req, res, next) => {
 // @access public
 exports.accountstatement = asyncHandler(async (req, res, next) => {
   const userId = req.user._id.toString();
-  const transactions = await Transaction.find({user: userId});
+  const transactions = await Transaction.find({user: userId}).sort({date: -1}).exec();
   res.render("Account Summary", {transactions} );
 });
 // @desc Render Account details page
@@ -233,6 +233,11 @@ exports.transfermoney = asyncHandler(async (req, res, next) => {
   const userId = req.user._id.toString();
   const transactions = await Transaction.find({user: userId});
   res.render("Transfer money", {transactions});
+});
+// @desc Render Brokerage page
+// @access public
+exports.brokerage = asyncHandler(async (req, res, next) => {
+  res.render("Brokerage");
 });
 
 // @desc Logs a user out
