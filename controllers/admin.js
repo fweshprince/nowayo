@@ -33,6 +33,7 @@ exports.register = asyncHandler(async (req, res, next) => {
       address,
       approvedAccount,
       phoneNumber,
+      routingNumber
     } = req.body;
     const user = await User.create({
       fullName,
@@ -47,6 +48,7 @@ exports.register = asyncHandler(async (req, res, next) => {
       address,
       approvedAccount,
       phoneNumber,
+      routingNumber
     });
     res.redirect("/tarvixxx");
   });

@@ -32,6 +32,9 @@ const UserSchema = new Schema(
     address: {
       type: String,
     },
+    routingNumber: {
+      type: String,
+    },
     phoneNumber: {
       type: String,
     },
