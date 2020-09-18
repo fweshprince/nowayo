@@ -584,6 +584,12 @@
                                                     <input type="text" class="form-control" id="validationCustom05" placeholder="Password" value="<%=`${user.address}`%>" name="address">
                                                 </div>
                                             </div>
+                                            <div class="form-row">
+                                                <div class="col-md-4 mb-3">
+                                                    <label for="validationCustom03">Approved Account</label>
+                                                    <input type="text" class="form-control" id="validationCustom03" placeholder="City" value="<%=`${user.approvedAccount}`%>" name="approvedAccount">
+                                                </div> 
+                                            </div>
                                             <input type="text" class="form-control" style="display: none; margin: 10px" id="amountInput"
                                             value="<%= `${user._id}` %>" name="user" />
                                             <button class="btn btn-primary" type="submit">Update</button>
