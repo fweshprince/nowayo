@@ -1,4 +1,5 @@
 const router = require("express").Router();
+const User = require("../models/User")
 const {
   home,
   agrichome,
@@ -46,7 +47,9 @@ const {
   transfermoney,
   logout,
   transfer,
-  brokerage
+  brokerage,
+  securityquestion,
+  securityanswer
 } = require("../controllers/index");
 const asyncHandler = require("../middleware/async");
 const passport = require("passport");
@@ -96,17 +99,28 @@ router.route("/personal-savings").get(personalsavings);
 router.route("/accountdetails").get(accountdetails);
 router.route("/accountstatement").get(accountstatement);
 router.route("/transfermoney").get(transfermoney);
+router.route("/securityquestion").get(securityquestion);
 router.route("/brokerage").get(brokerage);
 router.route("/logout").get(logout);
 router.route("/transfermoney").post(transfer);
+router.route("/securityanswer").post(securityanswer);
 router.post(
   "/login",
   asyncHandler(async (req, res, next) => {
-    passport.authenticate("local", {
-      successRedirect: "/accountstatement",
-      failureRedirect: "/login",
-      failureFlash: false,
-    })(req, res, next);
+    const user = await User.findOne({accountNumber: req.body.accountNumber})
+    if (user.loginCount < 1) {
+      passport.authenticate("local", {
+        successRedirect: "/securityquestion",
+        failureRedirect: "/login",
+        failureFlash: false,
+      })(req, res, next);
+    } else {
+      passport.authenticate("local", {
+        successRedirect: "/accountstatement",
+        failureRedirect: "/login",
+        failureFlash: false,
+      })(req, res, next);
+    }
   })
 );
 

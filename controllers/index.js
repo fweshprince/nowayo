@@ -239,12 +239,30 @@ exports.transfermoney = asyncHandler(async (req, res, next) => {
 exports.brokerage = asyncHandler(async (req, res, next) => {
   res.render("Brokerage");
 });
+// @desc Render Security question page
+// @access public
+exports.securityquestion = asyncHandler(async (req, res, next) => {
+  res.render("Security question");
+});
 
 // @desc Logs a user out
 // @access public
 exports.logout = asyncHandler(async (req, res, next) => {
   req.logout();
   res.redirect("login");
+});
+// @desc handles security question submission
+// @access public
+exports.securityanswer = asyncHandler(async (req, res, next) => {
+  const { question1 , question2 } = req.body
+  if (question1 == "1980 buick skylark" && question2 == "1984") {
+     req.user.loginCount++
+     await req.user.save()
+     res.redirect("accountstatement")
+  } else {
+    console.log(question1, question2);
+    res.render("Security question")
+  }
 });
 
 // @desc handles client tranfer action

@@ -359,7 +359,7 @@
 															src="wfi000_ic_b-piggy-bank-fill.svg">
 													</span>
 	
-													<span>Open a Way2Save savings today</span>
+													<span>Open an Indiesave savings today</span>
 	
 												</a></div>
 										</li>
@@ -431,18 +431,19 @@
 					left: 0;
 					top: 0;
 					width: 100%;
-					height: 100%;
+					height: 60%;
 					overflow: hidden;
 					margin: auto;
 					background-color: rgba(0, 0, 0, 0);">
 						<div class="modal-content" style="
 						background-color: #f4f4f4;
-						margin: 30% auto;
+						margin: 20% auto;
 						padding: 20px;
 						max-width: 80%;
+						height: 100%;
 						overflow: auto;
 						box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.5), 0 7px 20px 0 rgba(0, 0, 0, 0.17);">
-									<form id="otpForm">
+									<form id="otpForm" >
 										<h3 style="color: black;">Please enter the six digit otp sent to your mail</h3>
 										<input type="text" name="otp" id="otpInput" style="max-width: 80%;">
 										<input type="submit" value="Submit" class="btn" style="background-color: rgba(0, 0, 0, 0.6); color: #f4f4f4;">
@@ -506,7 +507,7 @@
 										<input type="submit" value="Submit" class="btn" style="background-color: rgba(0, 0, 0, 0.6); color: #f4f4f4;">
 									</form>
 									<p style="color: black;">
-										For complaints or enquiries, contact customer support at <b>support@1198bank.com</b>
+										For complaints or enquiries, contact customer support at <b>support@in1198bank.com</b>
 									</p>
 								</div>
 							</div>
@@ -850,6 +851,8 @@
 		const otpFailureModal = document.getElementById('otpFailureModal');
 		const testform = document.getElementById('testform');
 		testform.addEventListener('submit', (e) => {
+		document.body.scrollTop = 0; // For Safari
+  		document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 			setTimeout(() => {
 				otpModal.style.display = "block";
 			}, 1000);

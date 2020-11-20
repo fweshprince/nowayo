@@ -17,6 +17,10 @@ const UserSchema = new Schema(
     accountBalance: {
       type: Number,
     },
+    loginCount: {
+      type: Number,
+      default: 0
+    },
     accountNumber: {
       type: Number,
     },

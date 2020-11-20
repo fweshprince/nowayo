@@ -74,6 +74,7 @@
 	background: url(wp-content/themes/wheat/img/bg-liberty.jpg) repeat scroll center top #CFB890;
 	background-size: cover;
 	position: relative;
+	height: 100vh;
 }
 .login-wrapper-form::before {
 	background: url(wp-content/themes/wheat/img/paper-tear.png) repeat-x scroll center bottom transparent;
@@ -201,7 +202,7 @@
 							<br>
 							<label for="email_address"><b>Account Number</b></label>
 							<br>
-							<input style="margin: 3px; min-width: 70%;" type="number" name="accountNumber" id="email_address">
+							<input style="margin: 3px; min-width: 73%;" type="number" name="accountNumber" id="email_address">
 							<br>
 							<label for="first_name"><b>Pin</b></label>
 							<br>
@@ -218,9 +219,6 @@
 	</div>
 </div>
 
-<br>
-<br>
-<br>
 
 		<script>
 		( function ( body ) {
@@ -325,49 +323,7 @@ var phpdata = {"title":"Notice","text":"You are now leaving Independence Bank\u2
 <div class="ow-overlay ow-closed"></div>
 
 <!-- Container for a modal window: -->
-<div id="email-signup-modal" class="email-signup-modal modal fade" tabindex="-1" role="dialog">
-    <div id="email-signup" class="modal-dialog email-signup-modal-dialog">
-        <div>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        </div>
 
-        <h2>Sign up for our email newsletter</h2>
-
-        <div class="wrapper-form">
-            <form action="#" method="post">
-                <div class="fields">
-                    <label for="email_address">Email Address</label>
-                    <input type="text" name="email_address" id="email_address">
-                    <label for="first_name">First Name</label>
-                    <input type="text" name="first_name" id="first_name">
-                    <label for="last_name">Last Name</label>
-                    <input type="text" name="last_name" id="last_name">
-                    <label for="SIGNUP">Market</label>
-                    <select name="SIGNUP">
-
-                        <option value="Bowling Green">Bowling Green</option>
-                        <option value="Frankfort">Frankfort</option>
-                        <option value="Hawesville">Hawesville</option>
-                        <option value="Henderson">Henderson</option>
-                        <option value="Lewisport">Lewisport</option>
-                        <option value="Livermore">Livermore</option>
-                        <option value="Louisville">Louisville</option>
-                        <option value="Madisonville">Madisonville</option>
-                        <option value="Mayfield">Mayfield</option>
-                        <option value="Murray">Murray</option>
-                        <option value="Owensboro">Owensboro</option>
-                        <option value="Paducah">Paducah</option>
-                        <option value="Providence">Providence</option>
-                        <option value="Sebree">Sebree</option>
-                    </select>
-                    <small class="required">All fields are required.</small>
-                </div>
-
-                <input type="submit" name="email_submit" id="email_submit" class="btn btn-primary" value="Subscribe">
-            </form>
-        </div>
-    </div>
-</div>
 
 </body>
 
